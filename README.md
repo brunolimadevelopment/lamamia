@@ -25,7 +25,7 @@ This project was developed with the following technologies:
 + CSS module ✔
 ___
 
-## 🐱‍👤 How To Use ##
+## How To Use ##
 
 To clone and run this application, you'll need Git,  installed on your computer. From your command line:
 
