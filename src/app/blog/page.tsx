@@ -33,7 +33,7 @@ async function getData() {
 
     } catch (error) {
         console.log('Error fetching data', error)
-        return [];
+        return [error];
     }
 }
 
