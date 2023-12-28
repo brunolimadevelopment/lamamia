@@ -6,8 +6,8 @@ import type { Metadata } from 'next'
 
 // SEO Static metadata
 export const metadata: Metadata = {
-    title: 'Lamamia Contato',
-    description: 'This is Contact Page',
+    title: "Lamamia Contato",
+    description: "This is Contact Page",
 }
 
 
