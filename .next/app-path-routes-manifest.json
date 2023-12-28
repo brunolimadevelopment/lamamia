@@ -11,10 +11,10 @@
   "/blog/[id]/page": "/blog/[id]",
   "/api/posts/route": "/api/posts",
   "/portfolio/page": "/portfolio",
-  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
-  "/dashboard/(auth)/login/page": "/dashboard/login",
   "/portfolio/[category]/page": "/portfolio/[category]",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
   "/dashboard/(auth)/register/page": "/dashboard/register",
+  "/dashboard/(auth)/login/page": "/dashboard/login",
   "/api/auth/register/route": "/api/auth/register",
   "/api/posts/[id]/route": "/api/posts/[id]"
 }

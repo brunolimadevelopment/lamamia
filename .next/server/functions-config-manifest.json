@@ -5,9 +5,9 @@
     "/api/posts/[id]": {},
     "/api/posts": {},
     "/about": {},
-    "/blog": {},
     "/contact": {},
     "/": {},
-    "/portfolio": {}
+    "/portfolio": {},
+    "/blog": {}
   }
 }
