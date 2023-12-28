@@ -14,17 +14,23 @@ export const metadata: Metadata = {
 // 1º SEARCH DATA
 async function getData() {
 
+    try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/todos/", {
+            cache: "no-store",
+        });
 
-    const res = await fetch("https://lamamia.vercel.app/api/posts", {
-        cache: "no-store",
-    });
+        if (!res.ok) {
+            //console.log(res)
+            throw new Error("Failed to fetch data");
+        }
 
-    if (!res.ok) {
-        //console.log(res)
-        throw new Error("Failed to fetch data");
+        const data = await res.json();
+        console.log(data);
+
+        return data;
+    } catch (error) {
+        console.log('Error fetching data', error)
     }
-
-    return res.json();
 }
 
 // 2º INSERT DATA INTO THE COMPONENT
