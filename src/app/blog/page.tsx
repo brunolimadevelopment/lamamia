@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from 'next'
+
 
 // SEO Static metadata
 export const metadata: Metadata = {
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
 async function getData() {
 
 
-    const res = await fetch("http://localhost:3000/api/posts", {
+    const res = await fetch("https://lamamia.vercel.app/api/posts", {
         cache: "no-store",
     });
 
@@ -31,7 +33,7 @@ const Blog = async () => {
 
     return (
         <div className={styles.mainContainer}>
-            {data.map((item) => (
+            {data.map((item: any) => (
                 <Link href={`/blog/${item._id}`} className={styles.container} key={item._id}>
                     <div className={styles.imageContainer}>
                         <Image

@@ -1,0 +1,31 @@
+rafce
+
+
+on client side
+- fetch in useEffect
+- use a fetching library (react query, swr)
+
+on server side
+
+
+
+About Context
+
+O contexto é usado principalmente quando alguns dados precisam ser acessíveis por muitos componentes em diferentes níveis de aninhamento. 
+
+About Auth
+https://authjs.dev/getting-started/oauth-tutorial
+
+Using SWR 
+//const fetcher = (...args) => fetch(...args).then(res => res.json())
+//const { data, error, isLoading } = useSWR("https://jsonplaceholder.typicode.com/posts", fetcher)
+//console.log(data)
+
+
+no next.js por padrao todos os componentes renderizam no servidor
+
+utilize "use client" no inicio do arquivo quando quiser renderiza-lo no client side.
+
+https://authjs.dev/getting-started/oauth-tutorial
+ID CLIENT: 746076707334-1eu1r9a3mifd0822flhsb9khara12mng.apps.googleusercontent.com
+SECRET KEY: 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

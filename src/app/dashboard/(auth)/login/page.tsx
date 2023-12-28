@@ -5,12 +5,12 @@ import { getProviders, signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-const Login = ({ url }) => {
+const Login = ({ url }: any) => {
     const session = useSession()
     const router = useRouter()
     const params = useSearchParams()
-    const [error, setError] = useState("")
-    const [success, setSuccess] = useState("")
+    const [error, setError] = useState<string | null>("")
+    const [success, setSuccess] = useState<string | null>("")
 
     useEffect(() => {
         setError(params.get("error"))
@@ -26,7 +26,7 @@ const Login = ({ url }) => {
         router?.push("/dashboard")
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault()
         const email = e.target[0].value
         const password = e.target[1].value

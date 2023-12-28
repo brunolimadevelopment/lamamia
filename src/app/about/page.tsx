@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import styles from './page.module.css'
 import Button from '@/components/Button/Button'
+import type { Metadata } from 'next'
+
 
 export const metadata: Metadata = {
     title: 'Lamamia About',

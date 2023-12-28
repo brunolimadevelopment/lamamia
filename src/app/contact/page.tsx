@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import Button from '@/components/Button/Button'
+import type { Metadata } from 'next'
 
 // SEO Static metadata
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ const Contact = () => {
                 <form className={styles.form}>
                     <input type="text" placeholder="name" className={styles.input} />
                     <input type="text" placeholder="email" className={styles.input} />
-                    <textarea className={styles.textArea} placeholder="message" cols="30" rows="10"></textarea>
+                    <textarea className={styles.textArea} placeholder="message"></textarea>
                     <Button url="#" text="Send" />
                 </form>
             </div>

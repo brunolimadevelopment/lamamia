@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
 // 1º SEARCH DATA
-async function getData(id) {
+async function getData(id: any) {
     const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
         cache: "no-store",
     })
@@ -17,7 +17,7 @@ async function getData(id) {
 }
 
 // SEO Dynamic metadata
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: any) {
 
     const post = await getData(params.id)
     return {
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
 }
 
 // 2º INSERT DATA INTO THE COMPONENT
-const BlogPost = async ({ params }) => {
+const BlogPost = async ({ params }: any) => {
     const data = await getData(params.id)
     return (
         <div className={styles.container}>

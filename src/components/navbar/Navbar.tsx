@@ -55,12 +55,12 @@ const Navbar = () => {
                 <div className={styles.nav}>
                     {
                         links.map(link => (
-                            <Link key={link.id} href={link.url} styles={styles.link}>{link.title}</Link>
+                            <Link key={link.id} href={link.url} className={styles.link}>{link.title}</Link>
                         ))
                     }
                     {
                         session.status === "authenticated" && (
-                            <button onClick={signOut} className={styles.logout}>Logout</button>
+                            <button onClick={() => signOut()} className={styles.logout}>Logout</button>
                         )
                     }
                 </div>
