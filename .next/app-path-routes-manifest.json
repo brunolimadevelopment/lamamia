@@ -1,20 +1,20 @@
 {
   "/_not-found": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
   "/page": "/",
   "/csrpage/page": "/csrpage",
   "/dashboard/page": "/dashboard",
   "/ssrpage/page": "/ssrpage",
-  "/contact/page": "/contact",
-  "/blog/page": "/blog",
   "/about/page": "/about",
+  "/blog/page": "/blog",
+  "/contact/page": "/contact",
   "/blog/[id]/page": "/blog/[id]",
-  "/portfolio/page": "/portfolio",
   "/api/posts/route": "/api/posts",
+  "/portfolio/page": "/portfolio",
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
   "/dashboard/(auth)/login/page": "/dashboard/login",
-  "/favicon.ico/route": "/favicon.ico",
-  "/portfolio/[category]/page": "/portfolio/[category]",
   "/dashboard/(auth)/register/page": "/dashboard/register",
-  "/api/posts/[id]/route": "/api/posts/[id]",
-  "/api/auth/register/route": "/api/auth/register"
+  "/portfolio/[category]/page": "/portfolio/[category]",
+  "/api/auth/register/route": "/api/auth/register",
+  "/api/posts/[id]/route": "/api/posts/[id]"
 }
