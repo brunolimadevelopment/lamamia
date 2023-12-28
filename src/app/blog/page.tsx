@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 async function getData() {
 
     try {
-        const res = await fetch("https://bloglamamia.vercel.app/", {
+        const res = await fetch("https://bloglamamia.vercel.app/api/posts", {
             cache: "no-store",
         });
 
