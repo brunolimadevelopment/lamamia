@@ -1,15 +1,16 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from 'next'
+//import type { Metadata } from 'next'
 
 
 // SEO Static metadata
-export const metadata: Metadata = {
-    title: 'Lamamia Blog',
-    description: 'This is Blog Page',
-}
+// export const metadata: Metadata = {
+//     title: 'Lamamia Blog',
+//     description: 'This is Blog Page',
+// }
 
 // 1º SEARCH DATA
 async function getData() {
@@ -17,6 +18,8 @@ async function getData() {
     try {
         const res = await fetch("https://bloglamamia.vercel.app/api/posts", {
             cache: "no-store",
+            headers: { "Content-type": "application/json" },
+
         });
 
         if (!res.ok) {
@@ -25,7 +28,7 @@ async function getData() {
         }
 
         const data = await res.json();
-        console.log(data);
+
 
         return data;
     } catch (error) {
@@ -35,7 +38,16 @@ async function getData() {
 
 // 2º INSERT DATA INTO THE COMPONENT
 const Blog = async () => {
-    const data = await getData();
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await getData();
+            setData(result);
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <div className={styles.mainContainer}>
