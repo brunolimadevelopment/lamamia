@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 async function getData() {
 
     try {
-        const res = await fetch("https://jsonplaceholder.typicode.com/todos/", {
+        const res = await fetch("https://bloglamamia.vercel.app/", {
             cache: "no-store",
         });
 
